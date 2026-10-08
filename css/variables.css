@@ -1,0 +1,129 @@
+/* ==========================================================================
+   variables.css — JPCS-TSU "Full Throttle"
+   Custom properties ONLY. No element styling, no layout rules.
+   ========================================================================== */
+
+:root {
+
+  /* COLOR — palette */
+  --c-red:        #E10600;
+  --c-red-dark:   #B00500;
+  --c-gold:       #FFD400;
+  --c-gold-dark:  #D9B400;
+  --c-asphalt:    #15151E;
+  --c-carbon:     #1F1F2E;
+  --c-carbon-2:   #262637;
+  --c-white:      #FFFFFF;
+  --c-smoke:      #9CA3AF;
+  --c-slate:      #6B6B85;
+
+  --c-border:     #2A2A3C;
+  --c-border-soft:#20202E;
+
+  /* COLOR — semantic */
+  --c-bg:            var(--c-asphalt);
+  --c-surface:       var(--c-carbon);
+  --c-surface-alt:   var(--c-carbon-2);
+  --c-text:          var(--c-white);
+  --c-text-muted:    var(--c-smoke);
+  --c-accent:        var(--c-red);
+  --c-accent-strong: var(--c-gold);
+  --c-on-accent:     var(--c-asphalt);
+  --c-focus:         var(--c-gold);
+
+  /* TYPE — families */
+  --ff-display: "Racing Sans One", "Arial Black", "Helvetica Neue", sans-serif;
+  --ff-data:    "Orbitron", "Courier New", ui-monospace, monospace;
+  --ff-body:    "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+                Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  /* TYPE — scale */
+  --fs-wordmark: clamp(3.5rem, 20vw, 16rem);
+  --fs-hero:     clamp(3rem,   12vw,  9rem);
+  --fs-h2:       clamp(1.75rem, 4vw,  3rem);
+  --fs-h3:       clamp(1.25rem, 2.5vw, 1.75rem);
+  --fs-body:     clamp(1rem,   1.5vw,  1.125rem);
+  --fs-small:    0.875rem;
+  --fs-label:    0.75rem;
+  --fs-readout:  clamp(1.5rem,  5vw,   3.5rem);
+
+  --lh-tight: 1.05;
+  --lh-snug:  1.25;
+  --lh-body:  1.65;
+
+  --ls-label: 0.12em;
+  --ls-tight: -0.02em;
+
+  --fw-regular: 400;
+  --fw-medium:  500;
+  --fw-bold:    700;
+
+  /* SPACE */
+  --sp-1: 0.25rem;
+  --sp-2: 0.5rem;
+  --sp-3: 0.75rem;
+  --sp-4: 1rem;
+  --sp-5: 1.5rem;
+  --sp-6: 2rem;
+  --sp-7: 3rem;
+  --sp-8: 4rem;
+  --sp-9: 6rem;
+
+  --section-pad-y: clamp(3rem, 8vw, 6rem);
+  --stack-gap:     var(--sp-5);
+
+  /* LAYOUT */
+  --container-max: 1280px;
+  --container-pad: clamp(1rem, 4vw, 2rem);
+  --header-h:      4.5rem;
+
+  /* RADII */
+  --r-sm:   2px;
+  --r-md:   4px;
+  --r-lg:   8px;
+  --r-pill: 999px;
+
+  /* ELEVATION */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.6);
+  --glow-red:  0 0 24px rgba(225, 6, 0, 0.45);
+  --glow-gold: 0 0 24px rgba(255, 212, 0, 0.35);
+
+  /* MOTION */
+  --dur-fast: 150ms;
+  --dur-base: 250ms;
+  --dur-slow: 400ms;
+  --ease-out:    cubic-bezier(0.16, 1, 0.30, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+
+  /* Z-INDEX */
+  --z-base:    1;
+  --z-reveal: 10;
+  --z-header: 100;
+  --z-nav:    200;
+
+  /* TEXTURES */
+  --tex-carbon:
+    repeating-linear-gradient(45deg,
+      rgba(255,255,255,0.020) 0 2px, transparent 2px 4px),
+    repeating-linear-gradient(-45deg,
+      rgba(255,255,255,0.014) 0 2px, transparent 2px 4px);
+
+  --tex-stripes:
+    repeating-linear-gradient(-20deg,
+      var(--c-red) 0 14px, transparent 14px 34px);
+
+  --tex-checker:
+    repeating-conic-gradient(var(--c-white) 0% 25%, transparent 0% 50%)
+    0 0 / 24px 24px;
+}
+
+/* Reduced motion — global kill switch */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-fast: 0ms;
+    --dur-base: 0ms;
+    --dur-slow: 0ms;
+  }
+}
