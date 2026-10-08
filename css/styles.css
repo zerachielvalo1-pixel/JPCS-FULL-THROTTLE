@@ -154,6 +154,31 @@ h1, h2, h3 { text-wrap: balance; }
   border-bottom-color: var(--c-accent);
 }
 
+.lights {
+  display: flex;
+  gap: 6px;
+  padding: 6px 8px;
+  background: var(--c-carbon);
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-md);
+}
+
+.lights__unit {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #3A0000;
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.7);
+  transition: background var(--dur-fast) var(--ease-out),
+              box-shadow var(--dur-fast) var(--ease-out);
+}
+
+.lights__unit.is-on {
+  background: var(--c-red);
+  box-shadow: 0 0 10px var(--c-red),
+              0 0 3px #FFF inset;
+}
+
 .btn {
   display: inline-block;
   padding: var(--sp-3) var(--sp-6);
@@ -267,6 +292,10 @@ h1, h2, h3 { text-wrap: balance; }
 /* --------------------------------------------------------------------------
    BREAKPOINTS (mobile-first)
    -------------------------------------------------------------------------- */
+@media (max-width: 479px) {
+  .lights { display: none; }
+}
+
 @media (min-width: 768px) {
   .nav__list { display: flex; }
 }

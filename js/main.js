@@ -1,7 +1,9 @@
 /* Entry point. Each feature is a module with its own init().
    Progressive enhancement: the page reads fine with JS off. */
 
-const modules = [];
+import { initLights } from './lights.js';
+
+const modules = [initLights];
 
 function boot() {
   modules.forEach((init) => {
