@@ -1,0 +1,10 @@
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/*
+!.vscode/settings.json
+.idea/
+*.swp
+*.log
+node_modules/
+dist/
